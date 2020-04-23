@@ -103,3 +103,9 @@ function drawHangman(l){
     };
   };
 };
+
+function clearHangman(){
+	for (let i=0; i < hangman.children.length; i++){
+		hangman.children[i].style.visibility = "hidden"
+	};
+};
