@@ -132,6 +132,23 @@ body{
 	top: -353px;
 }
 
+.left-leg:before, .right-leg:before{
+    display: inline-block;
+    content: "";
+    width: 5px;
+    height: 15px;
+    position: absolute;
+    top: -12px;
+    left:0px;
+    background: black;
+    border-radius:2px;
+}
+
+.right-leg:before{
+    top: -10px;
+    left: 49px;
+}
+
 .letters{
 	width: 30%;
 	height: auto;
