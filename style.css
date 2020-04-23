@@ -150,8 +150,8 @@ body{
 }
 
 .letters{
-	width: 30%;
-	height: auto;
+	width: 40%;
+	height: fit-content;
 	overflow-wrap: break-word;
 	position: relative;
 	top: -550px;
