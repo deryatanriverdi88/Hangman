@@ -109,3 +109,9 @@ function clearHangman(){
 		hangman.children[i].style.visibility = "hidden"
 	};
 };
+
+function clearStyleForLetters(){
+	for (let i=0; i < letters.length; i++){
+		letters[i].style.background = "#f58ba7"
+	};
+};
