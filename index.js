@@ -60,3 +60,10 @@ function startGame(){
 	correctLetters = [];
     clearStyleForLetters();
 }
+
+function setUnderline(){
+	underlineDiv.innerHTML = ""
+	for(let i=0; i < word.length; i++){
+	 underlineDiv.innerHTML += `<span></span>`
+ };
+}
