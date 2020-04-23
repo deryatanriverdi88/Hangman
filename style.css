@@ -159,7 +159,7 @@ body{
 .letter{
 	display: inline-block;
 	width: 25%;
-	height: 5vh;
+	height: 7vh;
 	font-size: 1em;
 	background: #f58ba7;
 	border-right: 2px solid white;
