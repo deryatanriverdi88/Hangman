@@ -15,6 +15,7 @@ letterDiv.innerHTML = alphabet.map(letter => {
 
 let clickedLetter = [];
 let correctLetters = [];
+let uniqueLetters = [];
 
 for(let i=0; i < letters.length; i++){
     letters[i].addEventListener('click', function(event){
