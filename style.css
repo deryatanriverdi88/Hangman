@@ -80,3 +80,13 @@ body{
 	top: -350px;
 	left: 150px;
 }
+
+.left-arm, .right-arm, .left-leg, .right-leg{
+	width: 50px;
+	height: 5px;
+	background: black;
+	position: relative;
+	top: -430px;
+	left: 110px;
+	transform: rotate(-45deg);
+}
