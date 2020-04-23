@@ -171,6 +171,13 @@ body{
 	outline: none;
 }
 
+.second-row{
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    margin-top: 2em;
+}
+
 .word-div{
 	width: 10%;
 	height: 10vh;
