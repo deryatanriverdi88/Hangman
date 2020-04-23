@@ -130,3 +130,12 @@ body{
 	outline: none;
 }
 
+.word-div{
+	width: 10%;
+	height: 10vh;
+	position: relative;
+	top: -480px;
+	left: 350px;
+	font-size: 40px;
+	letter-spacing: 15px;
+}
