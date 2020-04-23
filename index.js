@@ -115,3 +115,15 @@ function clearStyleForLetters(){
 		letters[i].style.background = "#f58ba7"
 	};
 };
+
+function lost(){
+    wordDiv.innerHTML = `${word}`;
+    setTimeout(() => {
+       let answer = confirm("Game Over! You lost :( Do you wanna play again?");
+    if(answer === true){
+        startGame();
+    } else {
+       return;
+    }
+   }, 50);
+};
