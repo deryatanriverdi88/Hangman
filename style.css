@@ -26,3 +26,9 @@ body{
 .hangman{
 	visibility: hidden;
 }
+
+.hanger{
+	width: 5px;
+	height:350px;
+	background: brown;
+}
