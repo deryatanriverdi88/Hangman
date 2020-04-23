@@ -16,6 +16,8 @@ letterDiv.innerHTML = alphabet.map(letter => {
 let clickedLetter = [];
 let correctLetters = [];
 let uniqueLetters = [];
+let drawnLine = [];
+let wrongLetters = [];
 
 for(let i=0; i < letters.length; i++){
     letters[i].addEventListener('click', function(event){
@@ -85,3 +87,58 @@ function wordDisplay(letter){
        };
     };
 };
+
+function drawHangman(l){
+    for (let i=0; i < hangman.children.length; i++){
+       if (drawnLine.length === hangman.children.length){
+            lost();
+            break;
+        } else if(!drawnLine.includes(hangman.children[i])){
+            if(!wrongLetters.includes(l)){
+                wrongLetters.push(l);
+                hangman.children[i].style.visibility = "visible"
+                drawnLine.push(hangman.children[i]);
+                break;
+        };
+    };
+  };
+};
+
+function clearHangman(){
+	for (let i=0; i < hangman.children.length; i++){
+		hangman.children[i].style.visibility = "hidden"
+	};
+};
+
+function clearStyleForLetters(){
+	for (let i=0; i < letters.length; i++){
+		letters[i].style.background = "#f58ba7"
+	};
+};
+
+function lost(){
+    wordDiv.innerHTML = `${word}`;
+    setTimeout(() => {
+       let answer = confirm("Game Over! You lost :( Do you wanna play again?");
+    if(answer === true){
+        startGame();
+    } else {
+       return;
+    }
+   }, 50);
+};
+
+function won(){
+	setTimeout(() => {
+		if(correctLetters.length === uniqueLetters.length){
+		let answer = confirm("Game Over! You won! Do you wanna play again?");
+		 if(answer === true){
+			 startGame();
+		 } else {
+			return;
+		}
+	 }
+	}, 50);
+};
+
+startGame();
