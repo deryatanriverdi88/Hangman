@@ -24,7 +24,9 @@ body{
 }
 
 .hangman{
-	visibility: hidden;
+    width: 30%;
+    height: 40vh;
+    visibility: hidden;
 }
 
 .hanger{
