@@ -68,3 +68,12 @@ function setUnderline(){
 	 underlineDiv.innerHTML += `<span></span>`
  };
 }
+
+function setWord(){
+	wordDiv.innerHTML = '';
+	let splitWord = word.split('');
+	uniqueLetters = [...new Set(splitWord)]
+	splitWord.map(letter => {
+		return  wordDiv.innerHTML += `<span class="word-span">${letter}</span>`
+  })
+}
