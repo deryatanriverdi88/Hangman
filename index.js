@@ -77,3 +77,11 @@ function setWord(){
 		return  wordDiv.innerHTML += `<span class="word-span">${letter}</span>`
   })
 }
+
+function wordDisplay(letter){
+    for(let i = 0; i < wordSpan.length; i ++){
+       if(wordSpan[i].innerHTML === letter){
+       wordSpan[i].style.visibility = 'visible'
+       };
+    };
+};
