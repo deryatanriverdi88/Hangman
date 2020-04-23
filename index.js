@@ -8,3 +8,7 @@ let wordDiv = document.querySelector('.word-div');
 let underlineDiv = document.querySelector('.underline-div');
 let letters = document.getElementsByClassName('letter');
 let wordSpan = document.getElementsByClassName('word-span');
+
+letterDiv.innerHTML = alphabet.map(letter => {
+	return `<button class="letter">${letter}</button>`
+}).join('');
