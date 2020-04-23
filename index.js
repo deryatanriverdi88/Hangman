@@ -15,6 +15,7 @@ letterDiv.innerHTML = alphabet.map(letter => {
 
 let clickedLetter = [];
 let correctLetters = [];
+let uniqueLetters = [];
 
 for(let i=0; i < letters.length; i++){
     letters[i].addEventListener('click', function(event){
@@ -33,4 +34,54 @@ for(let i=0; i < letters.length; i++){
             drawHangman(letter);
         };
     });
-   };
+};
+
+shuffleWords = (array)=> {
+    let i = array.length - 1;
+    for (; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+};
+
+let word = '';
+
+function startGame(){
+	word = shuffleWords(words)[0];
+	drawnLine = [];
+	setUnderline();
+	uniqueLetters = [];
+	setWord();
+	clearHangman();
+	clickedLetter = [];
+	wrongLetters = [];
+	correctLetters = [];
+    clearStyleForLetters();
+}
+
+function setUnderline(){
+	underlineDiv.innerHTML = ""
+	for(let i=0; i < word.length; i++){
+	 underlineDiv.innerHTML += `<span></span>`
+ };
+}
+
+function setWord(){
+	wordDiv.innerHTML = '';
+	let splitWord = word.split('');
+	uniqueLetters = [...new Set(splitWord)]
+	splitWord.map(letter => {
+		return  wordDiv.innerHTML += `<span class="word-span">${letter}</span>`
+  })
+}
+
+function wordDisplay(letter){
+    for(let i = 0; i < wordSpan.length; i ++){
+       if(wordSpan[i].innerHTML === letter){
+       wordSpan[i].style.visibility = 'visible'
+       };
+    };
+};
