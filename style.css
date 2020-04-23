@@ -71,3 +71,12 @@ body{
 	top: -350px;
 	left: 125px;
 }
+
+.body{
+	width: 5px;
+	height: 120px;
+	background: black;
+	position: relative;
+	top: -350px;
+	left: 150px;
+}
