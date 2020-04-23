@@ -15,12 +15,12 @@ body{
                                   supported by Chrome, Opera and Firefox */
 }
 
-.content{
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	top: 200px;
-	left: 200px;
+.first-row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 5em;
 }
 
 .hangman{
