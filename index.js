@@ -140,3 +140,5 @@ function won(){
 	 }
 	}, 50);
 };
+
+startGame();
