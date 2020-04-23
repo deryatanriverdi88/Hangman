@@ -73,6 +73,32 @@ body{
 	left: 125px;
 }
 
+.left-eye, .right-eye{
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: 15px;
+}
+
+.right-eye{
+    left: 28px;
+    top: 10px;
+}
+
+.mouth{
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+    top: 15px;
+
+}
+
 .body{
 	width: 5px;
 	height: 120px;
