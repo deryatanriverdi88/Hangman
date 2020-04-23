@@ -12,3 +12,6 @@ let wordSpan = document.getElementsByClassName('word-span');
 letterDiv.innerHTML = alphabet.map(letter => {
 	return `<button class="letter">${letter}</button>`
 }).join('');
+
+let clickedLetter = [];
+let correctLetters = [];
