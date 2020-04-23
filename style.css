@@ -129,3 +129,7 @@ body{
 	box-shadow: -2px -2px 4px 1px #ca6b84 inset;
 	outline: none;
 }
+
+.highlight{
+	background: #e6aebd;
+}
