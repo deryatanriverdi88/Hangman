@@ -90,10 +90,7 @@ function wordDisplay(letter){
 
 function drawHangman(l){
     for (let i=0; i < hangman.children.length; i++){
-       if (drawnLine.length === hangman.children.length){
-            lost();
-            break;
-        } else if(!drawnLine.includes(hangman.children[i])){
+    if(!drawnLine.includes(hangman.children[i])){
             if(!wrongLetters.includes(l)){
                 wrongLetters.push(l);
                 hangman.children[i].style.visibility = "visible"
@@ -102,6 +99,7 @@ function drawHangman(l){
         };
     };
   };
+  lost()
 };
 
 function clearHangman(){
@@ -117,15 +115,17 @@ function clearStyleForLetters(){
 };
 
 function lost(){
-    wordDiv.innerHTML = `${word}`;
-    setTimeout(() => {
-       let answer = confirm("Game Over! You lost :( Do you wanna play again?");
-    if(answer === true){
-        startGame();
-    } else {
-       return;
-    }
-   }, 50);
+    if (drawnLine.length === hangman.children.length){
+        wordDiv.innerHTML = `${word}`;
+        setTimeout(() => {
+           let answer = confirm("Game Over! You lost :( Do you wanna play again?");
+        if(answer === true){
+            startGame();
+        } else {
+           return;
+        }
+       }, 50);
+    };
 };
 
 function won(){
