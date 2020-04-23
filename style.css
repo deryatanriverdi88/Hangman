@@ -188,9 +188,10 @@ body{
 	margin-left: .5em;
 }
 
+
 .underline-div span{
     display: inline-block;
-    width:30px;
+    width:40px;
     height: 5px;
     border-top: 2px solid black;
     margin-left: -2px;
