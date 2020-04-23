@@ -90,3 +90,9 @@ body{
 	left: 110px;
 	transform: rotate(-45deg);
 }
+
+.right-arm, .right-leg{
+	top: -435px;
+	left: 145px;
+	transform: rotate(45deg);
+}
