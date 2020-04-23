@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 200px;
+	left: 200px;
+}
+
+.hangman{
+	visibility: hidden;
+}
+
+.hanger{
+	width: 5px;
+	height:350px;
+	background: brown;
+}
+
+.hanger:before, .hanger:after{
+	display: inline-block;
+	content: "";
+}
+
+.hanger:before{
+	width: 150px;
+	height: 50px;
+	border-top: 5px solid brown;
+}
+
+.hanger:after{
+	width: 150px;
+	height: 5px;
+	background: brown;
+	position: absolute;
+	top: 350px;
+	left: -75px;
+}
+
+.rope{
+	width: 5px;
+	height: 50px;
+	background: brown;
+	position: relative;
+	top:-350px;
+	left: 150px;
+}
+
+.head{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 5px solid black;
+	position: relative;
+	top: -350px;
+	left: 125px;
+}
+
+.body{
+	width: 5px;
+	height: 120px;
+	background: black;
+	position: relative;
+	top: -350px;
+	left: 150px;
+}
+
+.left-arm, .right-arm, .left-leg, .right-leg{
+	width: 50px;
+	height: 5px;
+	background: black;
+	position: relative;
+	top: -430px;
+	left: 110px;
+	transform: rotate(-45deg);
+}
+
+.right-arm, .right-leg{
+	top: -435px;
+	left: 145px;
+	transform: rotate(45deg);
+}
+
+.left-leg{
+	top: -348px;
+}
+
+.right-leg{
+	top: -353px;
+}
+
+.letters{
+	width: 30%;
+	height: auto;
+	overflow-wrap: break-word;
+	position: relative;
+	top: -550px;
+	left: 300px;
+	text-align: center;
+}
+
+.letter{
+	display: inline-block;
+	width: 25%;
+	height: 5vh;
+	font-size: 1em;
+	background: #f58ba7;
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	vertical-align: middle;
+	line-height: 5vh;
+	border-radius: 10px;
+	box-shadow: -2px -2px 4px 1px #ca6b84 inset;
+	outline: none;
+}
+
+.word-div{
+	width: 10%;
+	height: 10vh;
+	position: relative;
+	top: -480px;
+	left: 350px;
+	font-size: 40px;
+	letter-spacing: 15px;
+}
+
+.underline-div{
+	position: relative;
+	top: -500px;
+	left: 350px;
+}
+
+.underline-div span{
+    display: inline-block;
+    width:30px;
+    height: 5px;
+    border-top: 2px solid black;
+    margin-left: -2px;
+    margin-right: 15px;
+}
+
+.word-span{
+	visibility: hidden;
+}
