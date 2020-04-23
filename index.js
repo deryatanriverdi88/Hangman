@@ -15,3 +15,22 @@ letterDiv.innerHTML = alphabet.map(letter => {
 
 let clickedLetter = [];
 let correctLetters = [];
+
+for(let i=0; i < letters.length; i++){
+    letters[i].addEventListener('click', function(event){
+        let targetted = event.target;
+        let letter = event.target.innerText;
+        if(!clickedLetter.includes(letter)){
+            clickedLetter.push(letter);
+            targetted.style.background = '#e6aebd'
+        }
+        if(word.includes(letter)){
+            correctLetters.push(letter);
+            correctLetters = [...new Set(correctLetters)];
+            wordDisplay(letter);
+            won();
+        }else {
+            drawHangman(letter);
+        };
+    });
+   };
