@@ -32,7 +32,8 @@ body{
 .hanger{
 	width: 5px;
 	height:350px;
-	background: brown;
+    background: #705840;
+    position: relative;
 }
 
 .hanger:before, .hanger:after{
