@@ -45,3 +45,18 @@ shuffleWords = (array)=> {
     }
     return array;
 };
+
+let word = '';
+
+function startGame(){
+	word = shuffleWords(words)[0];
+	drawnLine = [];
+	setUnderline();
+	uniqueLetters = [];
+	setWord();
+	clearHangman();
+	clickedLetter = [];
+	wrongLetters = [];
+	correctLetters = [];
+    clearStyleForLetters();
+}
