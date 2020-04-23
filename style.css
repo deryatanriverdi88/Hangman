@@ -52,3 +52,12 @@ body{
 	top: 350px;
 	left: -75px;
 }
+
+.rope{
+	width: 5px;
+	height: 50px;
+	background: brown;
+	position: relative;
+	top:-350px;
+	left: 150px;
+}
