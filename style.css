@@ -104,3 +104,13 @@ body{
 .right-leg{
 	top: -353px;
 }
+
+.letters{
+	width: 30%;
+	height: auto;
+	overflow-wrap: break-word;
+	position: relative;
+	top: -550px;
+	left: 300px;
+	text-align: center;
+}
