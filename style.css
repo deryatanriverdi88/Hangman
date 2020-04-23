@@ -96,3 +96,7 @@ body{
 	left: 145px;
 	transform: rotate(45deg);
 }
+
+.left-leg{
+	top: -348px;
+}
