@@ -15,51 +15,52 @@ body{
                                   supported by Chrome, Opera and Firefox */
 }
 
-.content{
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	top: 200px;
-	left: 200px;
+.first-row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 5em;
 }
 
 .hangman{
-	visibility: hidden;
+    width: 30%;
+    height: 40vh;
+    visibility: hidden;
 }
 
 .hanger{
 	width: 5px;
 	height:350px;
-	background: brown;
+    background: #705840;
+    position: relative;
 }
 
-.hanger:before, .hanger:after{
-	display: inline-block;
-	content: "";
-}
-
-.hanger:before{
+.hanger-top{
 	width: 150px;
-	height: 50px;
-	border-top: 5px solid brown;
+    position: relative;
+    top: -350px;
+	border-top: 5px solid #705840;
 }
 
 .hanger:after{
+    display: inline-block;
+	content: "";
 	width: 150px;
 	height: 5px;
-	background: brown;
+	background: #705840;
 	position: absolute;
-	top: 350px;
-	left: -75px;
+	top: 349px;
+	left:0px;
 }
 
 .rope{
 	width: 5px;
 	height: 50px;
-	background: brown;
+	background: #705840;
 	position: relative;
 	top:-350px;
-	left: 150px;
+	left: 145px;
 }
 
 .head{
@@ -70,6 +71,32 @@ body{
 	position: relative;
 	top: -350px;
 	left: 125px;
+}
+
+.left-eye, .right-eye{
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: 15px;
+}
+
+.right-eye{
+    left: 28px;
+    top: 10px;
+}
+
+.mouth{
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+    top: 15px;
+
 }
 
 .body{
@@ -105,20 +132,34 @@ body{
 	top: -353px;
 }
 
+.left-leg:before, .right-leg:before{
+    display: inline-block;
+    content: "";
+    width: 5px;
+    height: 15px;
+    position: absolute;
+    top: -12px;
+    left:0px;
+    background: black;
+    border-radius:2px;
+}
+
+.right-leg:before{
+    top: -10px;
+    left: 49px;
+}
+
 .letters{
-	width: 30%;
-	height: auto;
+	width: 40%;
+	height: fit-content;
 	overflow-wrap: break-word;
-	position: relative;
-	top: -550px;
-	left: 300px;
-	text-align: center;
+    text-align: center;
 }
 
 .letter{
 	display: inline-block;
 	width: 25%;
-	height: 5vh;
+	height: 7vh;
 	font-size: 1em;
 	background: #f58ba7;
 	border-right: 2px solid white;
@@ -130,25 +171,27 @@ body{
 	outline: none;
 }
 
+.second-row{
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    margin-top: 2em;
+}
+
 .word-div{
-	width: 10%;
-	height: 10vh;
-	position: relative;
-	top: -480px;
-	left: 350px;
 	font-size: 40px;
-	letter-spacing: 15px;
+	letter-spacing:25px;
+	margin-left: .4em;
 }
 
 .underline-div{
-	position: relative;
-	top: -500px;
-	left: 350px;
+	margin-left: .5em;
 }
+
 
 .underline-div span{
     display: inline-block;
-    width:30px;
+    width:40px;
     height: 5px;
     border-top: 2px solid black;
     margin-left: -2px;
@@ -157,4 +200,10 @@ body{
 
 .word-span{
 	visibility: hidden;
+}
+
+@media only screen and (min-width: 850px){
+   .first-row{
+        justify-content:center;
+   }
 }
