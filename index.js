@@ -127,3 +127,16 @@ function lost(){
     }
    }, 50);
 };
+
+function won(){
+	setTimeout(() => {
+		if(correctLetters.length === uniqueLetters.length){
+		let answer = confirm("Game Over! You won! Do you wanna play again?");
+		 if(answer === true){
+			 startGame();
+		 } else {
+			return;
+		}
+	 }
+	}, 50);
+};
