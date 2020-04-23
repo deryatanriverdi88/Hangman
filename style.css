@@ -185,9 +185,7 @@ body{
 }
 
 .underline-div{
-	position: relative;
-	top: -500px;
-	left: 350px;
+	margin-left: .5em;
 }
 
 .underline-div span{
